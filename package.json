@@ -1,0 +1,19 @@
+{
+  "name": "elasticapi",
+  "version": "1.0.0",
+  "description": "A simple Node API using elasticsearch",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "node",
+    "elasticsearch"
+  ],
+  "author": "Norman Schultz",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^2.3.3",
+    "elasticsearch": "^16.7.1"
+  }
+}
