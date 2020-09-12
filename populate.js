@@ -1,11 +1,11 @@
 const esClient = require('./client');
 const csv = require('csv-parser');
 const fs = require('fs');
+const results = [];
 
-fs.readFile('zipcode_latlngs.csv', async (err, data) => {
-  if (err) {
-    console.error(err)
-    return
-  }
-  console.log(await csv(data))
-});
+fs.createReadStream('zipcode_latlngs.csv')
+  .pipe(csv())
+  .on('data', (data) => results.push(data))
+  .on('end', () => {
+    console.log(results);
+  });
