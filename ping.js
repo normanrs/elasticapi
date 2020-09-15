@@ -9,3 +9,5 @@ esClient.ping({
     console.log('Local elasticsearch is connected!');
   }
 });
+
+esClient.cat.count();
