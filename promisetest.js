@@ -3,7 +3,7 @@ const bar = function () {
         setTimeout(function () {
             resolve()
             console.log('bar');
-        }, 1000);
+        }, 2000);
     });
 };
 
@@ -12,10 +12,10 @@ const baz = function () {
         setTimeout(function () {
             resolve()
             console.log('baz');
-        }, 3000);
+        }, 1000);
     });
 };
 
 bar().then(function() {
-  return baz();
+  baz();
 });
