@@ -1,4 +1,4 @@
-// const esClient = require('./client');
+const esClient = require('./client');
 const csv = require('csv-parser');
 const fs = require('fs');
 var results = [];
@@ -18,7 +18,15 @@ function writeToEs() {
   console.log('Taylor thinks this will be in the middle')
   setTimeout(() => {
         console.log(`${results.length} ES records available`);
-        results.forEach(element => console.log(`${JSON.stringify(element)}`));
+        results.slice(0, 100).forEach(element => 
+          setTimeout(() => {
+            esClient.index({
+              index: 'zipcode',
+              id: `${results.indexOf(element)}`,
+              body: `${JSON.stringify(element)}`
+            });
+          }, 100)
+        );
     }, 500);
 };
 
