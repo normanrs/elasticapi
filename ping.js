@@ -6,6 +6,6 @@ esClient.ping({
   if (error) {
     console.trace('Elasticsearch cluster failed to connect');
   } else {
-    console.log('Elasticsearch connected');
+    console.log('Local elasticsearch is connected!');
   }
 });
