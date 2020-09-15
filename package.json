@@ -15,5 +15,8 @@
   "dependencies": {
     "csv-parser": "^2.3.3",
     "elasticsearch": "^16.7.1"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
   }
 }
