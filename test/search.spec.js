@@ -1,7 +1,25 @@
-import { find71937 } from "../search.js";
+const esClient = require('../client');
+const search = require('../search.js');
+const returnDate = search.returnDate;
+const getCount = search.getCount;
+const getLamont = search.getLamont;
+// const {returnDate, getCount} = require('../search.js');
+// import { returnDate,getCount } from '../search.js'
 
-describe("get71937()", () => {
+describe("returnDate", () => {
+    it("should return a date value", () => {
+        expect.anything(returnDate());
+    });
+});
+
+describe("getCount()", () => {
     it("should return record", () => {
-        expect(find71937()).toEqual('1600208373 22:19:33 100');
+        expect.anything(getCount());
+    });
+});
+
+describe("getLamont()", () => {
+    it("should return record", () => {
+        expect.anything(getLamont());
     });
 });
