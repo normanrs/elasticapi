@@ -12,27 +12,13 @@ describe("getCount()", () => {
     });
 });
 
-describe("getLamont()", () => {
-    it("should call getLamont function", () => {
-        expect.anything(search.getLamont());
-    });
-});
 
 describe("LamontData()", () => {
     it("should return record", () => {
       (async () => {
-        expect(await search.getLamont()).toContain('Lamont')
+        const result = await search.getLamont()
+        const city = result.hits.hits[0]._source.City
+        expect(city).equals('Lamont')
       })()
     });
-    // it('returns Lamont record', async () => {
-    //   expect(await search.getLamont()).toContain('Lamont')
-    // });
 });
-
-// test('gets Lamont data async', async () => {
-//   try {
-//     expect(await getLamont()).toContain('Lamont');
-//   } catch (e) {
-//     return e;
-//   }
-// });
