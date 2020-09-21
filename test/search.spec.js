@@ -23,7 +23,16 @@ describe("LamontData()", () => {
       (async () => {
         expect(await search.getLamont()).toContain('Lamont')
       })()
-        // var record = search.getLamont();
-        // expect(record).toContain('Lamont')
     });
+    // it('returns Lamont record', async () => {
+    //   expect(await search.getLamont()).toContain('Lamont')
+    // });
 });
+
+// test('gets Lamont data async', async () => {
+//   try {
+//     expect(await getLamont()).toContain('Lamont');
+//   } catch (e) {
+//     return e;
+//   }
+// });
