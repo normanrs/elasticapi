@@ -39,5 +39,6 @@ npm test
 5. Create a new Pull Request
 
 **Written by Norm Schultz**
+
 Github:[https://github.com/normanrs](https://github.com/normanrs/)
 Web:[http://www.normanrschultz.com](http://www.normanrschultz.com)
