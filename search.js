@@ -6,10 +6,6 @@ const searchDoc = async function(indexName, payload){
   });
 }
 
-function returnDate() {
-  return Date();
-}
-
 function getCount() {
   console.log('Connecting to es client');
   return esClient.cat.count();
@@ -23,12 +19,10 @@ const getLamont = async () => {
         }
     }
   }
-  const response = await searchDoc('zipcode', body)
-  return response
+  return await searchDoc('zipcode', body)
 }
 
 module.exports = {
-  returnDate,
   getCount,
   getLamont
 };
