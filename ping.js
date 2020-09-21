@@ -11,3 +11,4 @@ esClient.ping({
 });
 
 esClient.cat.count();
+console.log(module);
