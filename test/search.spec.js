@@ -16,8 +16,7 @@ describe("getCount()", () => {
 describe("LamontData()", () => {
     it("should return record", () => {
       (async () => {
-        const result = await search.getLamont()
-        const city = result.hits.hits[0]._source.City
+        const city = await search.getLamont().hits.hits[0]._source.City
         expect(city).equals('Lamont')
       })()
     });
