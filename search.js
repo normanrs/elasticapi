@@ -28,7 +28,7 @@ async function getLamont(){
       return resp;
       // console.log(resp);
   } catch (e) {
-      console.log(e);
+      return e;
   }
 }
 
