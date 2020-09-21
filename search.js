@@ -8,28 +8,23 @@ const searchDoc = async function(indexName, payload){
 
 function returnDate() {
   return Date();
-};
+}
 
 function getCount() {
   console.log('Connecting to es client');
   return esClient.cat.count();
-};
+}
 
-async function getLamont(){
+const getLamont = async () => {
   const body = {
-      query: {
-          match: {
-              "City": "Lamont"
-          }
-      }
+    query: {
+        match: {
+            "City": "Lamont"
+        }
+    }
   }
-  try {
-      const resp = await searchDoc('zipcode', body);
-      return resp;
-      // console.log(resp);
-  } catch (e) {
-      return e;
-  }
+  const response = await searchDoc('zipcode', body)
+  return response
 }
 
 module.exports = {
